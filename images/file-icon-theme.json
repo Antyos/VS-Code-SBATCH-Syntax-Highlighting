@@ -1,0 +1,10 @@
+{
+    "iconDefinitions": {
+        "sbatchFileIcon": {
+            "iconPath": "./letter-s-32.png"
+        }
+    },
+    "fileExtensions": {
+        "sbatch": "sbatchFileIcon"
+    }
+}

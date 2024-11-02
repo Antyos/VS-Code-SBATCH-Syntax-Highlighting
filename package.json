@@ -1,0 +1,80 @@
+{
+  "name": "sbatch",
+  "icon": "icon.png",
+  "displayName": "SBATCH Syntax Highlighting",
+  "description": "Syntax highlighting and job submission for .sbatch files in SLURM.",
+  "version": "0.0.1",
+  "publisher": "ephiCohen",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "sbatch",
+        "aliases": ["SBATCH", "sbatch"],
+        "extensions": [".sbatch"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sbatch",
+        "scopeName": "source.sbatch",
+        "path": "./syntaxes/sbatch.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "sbatchTheme",
+        "label": "SBATCH File Icon",
+        "path": "./images/file-icon-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "sbatch.submitSlurmJob",
+        "title": "Submit a SLURM Job from This File"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "sbatch.submitSlurmJob",
+          "when": "resourceExtname == .sbatch",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "vsce package",
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vscode": "^1.76.0"
+  },
+  "dependencies": {
+    "vscode": "^1.76.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ephi052/VS-Code-SBATCH-Syntax-Highlighting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ephi052/VS-Code-SBATCH-Syntax-Highlighting/issues"
+  },
+  "homepage": "https://github.com/ephi052/VS-Code-SBATCH-Syntax-Highlighting#readme",
+  "keywords": [
+    "SBATCH",
+    "SLURM",
+    "syntax highlighting"
+  ],
+  "author": "Ephi Cohen",
+  "license": "MIT"
+}

@@ -1,0 +1,8 @@
+# Ignore files and folders not needed in the published extension
+.vscode/
+node_modules/
+.vscodeignore
+.gitignore
+.git/
+README.md
+CHANGELOG.md

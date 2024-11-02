@@ -1,0 +1,28 @@
+{
+  "scopeName": "source.sbatch",
+  "patterns": [
+    {
+      "name": "keyword.control.sbatch", 
+      "match": "^#SBATCH\\b.*"
+    },
+    {
+      "name": "keyword.line.sbatch-param",  
+      "match": "^##SBATCH\\b.*"
+    },
+    {
+      "name": "variable.parameter.sbatch",
+      "match": "\\b(--[a-zA-Z-]+)\\b"
+    },
+    {
+      "name": "constant.numeric.sbatch",
+      "match": "\\b\\d+\\b"
+    },
+    {
+      "name": "string.quoted.sbatch",
+      "match": "\".*?\""
+    },
+    {
+      "include": "source.shell"  
+    }
+  ]
+}
