@@ -15,6 +15,15 @@ This extension provides syntax highlighting and job submission features for `.sb
 1. Open any `.sbatch` file in VS Code to see syntax highlighting.
 2. Right-click on the `.sbatch` file in the file explorer and select **Submit a SLURM Job from This File** to submit the job.
 
+### Syntax Highlighting
+
+![Syntax Highlighting](./images/syntax-highlighting.png)
+
+- Active `#SBATCH` commands are highlighted in **purple**.
+- Commented `##SBATCH` lines are highlighted in **blue**.
+- General comments are highlighted in **green**.
+- The rest of the text follows standard **bash** syntax colors.
+
 ## Requirements
 
 Make sure `sbatch` (the SLURM command) is available in your system's PATH.
