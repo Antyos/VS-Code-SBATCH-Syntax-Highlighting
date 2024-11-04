@@ -1,10 +1,10 @@
 {
   "name": "sbatch",
   "icon": "icon.png",
-  "displayName": "SBATCH Syntax Highlighting",
+  "displayName": "SBATCH File Syntax Highlighter and SLURM Job Submission",
   "description": "Syntax highlighting and job submission for .sbatch files in SLURM.",
   "version": "0.0.1",
-  "publisher": "ephiCohen",
+  "publisher": "EphiCohen",
   "engines": {
     "vscode": "^1.75.0"
   },

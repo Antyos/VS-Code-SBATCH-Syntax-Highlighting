@@ -13,7 +13,7 @@ This extension provides syntax highlighting and job submission features for `.sb
 - Folder Icon for directories.
 
 ## Installation
-- Install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ephi052.vscode-sbatch).
+- Install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=EphiCohen.sbatch).
 - For icon support, on the extension installation page, click on the **Set icon theme** button and select the HPC Icon Theme.
 
 ## How to Use
@@ -23,7 +23,7 @@ This extension provides syntax highlighting and job submission features for `.sb
 
 ### Syntax Highlighting
 
-![Syntax Highlighting](./images/syntax-highlighting.png)
+![Syntax Highlighting](https://github.com/ephi052/VS-Code-SBATCH-Syntax-Highlighting/blob/main/images/syntax-highlighting.png)
 
 - Active `#SBATCH` commands are highlighted in **purple**.
 - Commented `##SBATCH` lines are highlighted in **blue**.
@@ -45,4 +45,4 @@ For the license, see [LICENSE](./LICENSE.md)
 
 For more information, visit [our repository](https://github.com/ephi052/VS-Code-SBATCH-Syntax-Highlighting).
 
-![Icon](./icon.png)
+![Icon](https://github.com/ephi052/VS-Code-SBATCH-Syntax-Highlighting/blob/main/icon.png)

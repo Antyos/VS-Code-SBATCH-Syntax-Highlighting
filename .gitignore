@@ -16,3 +16,5 @@ package-lock.json
 # Ignore OS-specific or editor-specific files (optional)
 .DS_Store
 Thumbs.db
+
+.env
