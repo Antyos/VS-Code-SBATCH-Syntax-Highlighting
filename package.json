@@ -1,6 +1,6 @@
 {
   "name": "sbatch",
-  "icon": "icon.png",
+  "icon": "./images/icon.png",
   "displayName": "SBATCH Syntax Highlighting",
   "description": "Syntax highlighting and job submission for .sbatch files in SLURM.",
   "version": "0.0.1",

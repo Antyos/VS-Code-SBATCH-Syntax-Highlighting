@@ -1,6 +1,6 @@
 { 
     "iconDefinitions": {
-        "sbatchFileIcon": { "iconPath": "./letter-s-32.png" },
+        "sbatchFileIcon": { "iconPath": "./svg/sbatch.svg" },
         "htmlFileIcon": { "iconPath": "./svg/html.svg" },
         "cssFileIcon": { "iconPath": "./svg/css.svg" },
         "jsFileIcon": { "iconPath": "./svg/js.svg" },
@@ -52,7 +52,7 @@
         "gitignoreFileIcon": { "iconPath": "./svg/gitignore.svg" },
         "emlFileIcon": { "iconPath": "./svg/eml.svg" },
         "defaultFileIcon": { "iconPath": "./svg/default.svg" },
-        "folderIcon": { "iconPath": "./svg/folder.svg" }
+        "folderIcon": { "iconPath": "./svg/folder.svg" },
     },
     "fileExtensions": {
         "sbatch": "sbatchFileIcon",
@@ -111,11 +111,12 @@
         "eml": "emlFileIcon",
         "out": "defaultFileIcon",
         "rdp": "defaultFileIcon",
-        "": "defaultFileIcon",
-        "folder": "folderIcon"
 
     },
-    "folderNames": {},
+    "folderNames": {
+        "folder": "folderIcon"
+    },
     "fileNames": {},
-    "languageIds": {}
+    "languageIds": {},
+    "file": "defaultFileIcon"
 }
