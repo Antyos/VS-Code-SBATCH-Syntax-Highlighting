@@ -1,6 +1,6 @@
 {
   "name": "sbatch",
-  "icon": "./images/icon.png",
+  "icon": "icon.png",
   "displayName": "SBATCH Syntax Highlighting",
   "description": "Syntax highlighting and job submission for .sbatch files in SLURM.",
   "version": "0.0.1",
@@ -35,7 +35,7 @@
     "iconThemes": [
       {
         "id": "customFileIcons",
-        "label": "Custom File Icons",
+        "label": "HPC File Icons",
         "path": "./images/file-icon-theme.json"
       }
     ],
