@@ -2,35 +2,48 @@
   "scopeName": "source.sbatch",
   "patterns": [
     {
-      "match": "^\\s*(#SBATCH)(\\s+(?:(--[a-zA-Z-_]+)?\\s*(=)?\\s*(?:(\\d+(?:\\.\\d+)?)|(\".*?\")|.+?)*)|.*)?",
-      "captures": {
-        "1": {
-          "name": "keyword.control.sbatch"
-        },
-        "2": {
-          "name": "meta.argument.sbatch"
-        },
-        "3": {
-          "name": "variable.parameter.sbatch",
-          "comment": "\\b--[a-zA-Z-]+\\b"
-        },
-        "4": {
-          "name": "keyword.operator.assignment.sbatch",
-          "comment": "\\b=\\b"
-        },
-        "5": {
+      "begin": "^\\s*(#SBATCH)(\\s+(--[a-zA-Z-_]+)?\\s*(=)?)?",
+      "end": "$",
+      "beginCaptures": {
+        "1": {"name": "keyword.control.sbatch"},
+        "2": {"name": "meta.argument.sbatch"},
+        "3": {"name": "variable.parameter.sbatch"},
+        "4": {"name": "keyword.operator.assignment.sbatch"}
+      },
+      "contentName": "meta.argument.sbatch",
+      "patterns": [
+        {
           "name": "constant.numeric.sbatch",
-          "comment": "\\b\\d+\\b"
+          "match": "\\b\\d+(?:\\.\\d*)?\\b"
         },
-        "6": {
-          "name": "string.quoted.sbatch",
-          "comment": "\".*?\""
+        {
+          "name": "string.quoted.double.sbatch",
+          "begin": "\"",
+          "end": "\"",
+          "beginCaptures": {
+            "0": {"name": "punctuation.definition.string.begin.sbatch"}
+          },
+          "endCaptures": {
+            "0": {"name": "punctuation.definition.string.end.sbatch"}
+          },
+          "patterns": [
+            {
+              "include": "#filename_variable"
+            }
+          ]
         },
-        "7": {
+        {
+          "include": "#filename_variable"
+        },
+        {
+          "name": "comment.line.sbatch",
+          "match": "#.*"
+        },
+        {
           "name": "variable.other.sbatch",
-          "comment": "\\w+"
+          "match": "\\w+"
         }
-      }
+      ]
     },
     {
       "name": "keyword.line.sbatch-param",  
@@ -39,5 +52,11 @@
     {
       "include": "source.shell"  
     }
-  ]
+  ],
+  "repository": {
+    "filename_variable": {
+      "name": "constant.character.format.placeholder.other.sbatch",
+      "match": "%\\d*[a-zA-Z%]"
+    }
+  }
 }
