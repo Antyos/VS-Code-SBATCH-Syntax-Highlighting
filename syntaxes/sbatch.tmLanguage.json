@@ -46,8 +46,9 @@
       ]
     },
     {
-      "name": "keyword.line.sbatch-param",  
-      "match": "^##SBATCH\\b.*"
+      "name": "storage.type.disabled.sbatch meta.disabled.sbatch",
+      "match": "^##SBATCH\\b.*",
+      "comment": "This scope doesn't really make sense, but it does serve to highlight disabled SBATCH directives differently."
     },
     {
       "include": "source.shell"  

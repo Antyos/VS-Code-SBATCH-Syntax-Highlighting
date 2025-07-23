@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - Syntax highlighting of arguments, strings, and numbers in SLURM directives.
+- Different colors for disabled `##SLURM` lines for other themes.
 
 ## [0.0.1] - 2024-11-02
 ### Added
