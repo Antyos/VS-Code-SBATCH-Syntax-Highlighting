@@ -2,7 +2,7 @@
   "scopeName": "source.sbatch",
   "patterns": [
     {
-      "begin": "^\\s*(#SBATCH)(\\s+(--[a-zA-Z-_]+)?\\s*(=)?)?",
+      "begin": "^(#SBATCH)(\\s+(--[a-zA-Z-_]+)?\\s*(=)?)?",
       "end": "$",
       "beginCaptures": {
         "1": {"name": "keyword.control.sbatch"},
